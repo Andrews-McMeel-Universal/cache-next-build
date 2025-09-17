@@ -15,8 +15,6 @@ runs:
         path: |
           ${{ github.workspace }}/.next
         key: build-${{ github.sha }}
-        restore-keys: |
-          build-
 
     - name: Build app
       if: steps.build-cache.outputs.cache-hit != 'true'
